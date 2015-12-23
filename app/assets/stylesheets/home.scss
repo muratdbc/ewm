@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700);
+body{
+  font-family: 'Lato', sans-serif;
+}
+.first-image{
+  background-image: url(image-path("bridge.jpg"));
+  min-height: 150px;
+  background-size: cover;
+  background-repeat:no-repeat;
+  margin:0px;
+}
+.tagline{
+  font-weight: 300;
+}
