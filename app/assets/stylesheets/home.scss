@@ -1,11 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700);
 body{
   font-family: 'Lato', sans-serif;
+  background-color:#E8E8E8;
 }
-.first-image{
-  background-image: url(image-path("bridge.jpg"));
-  min-height: 150px;
-  background-size: cover;
+.first-image-web{
+  background-image: url(image-path("logo.jpg"));
+  min-height: 280px;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  margin:0px;
+}
+.first-image-mobile{
+  background-image: url(image-path("logo.jpg"));
+  min-height: 100px;
+  background-size: 100% 100%;
   background-repeat:no-repeat;
   margin:0px;
 }
