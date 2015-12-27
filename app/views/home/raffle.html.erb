@@ -15,15 +15,14 @@
 <div class="row">
   <div class="large-7 column  center-text">
   <div class="row">
-    <div class="large-11 column text-center people-image" >
+    <div class="large-11 column people-image " >
       <!-- <p style="font-weight:300;font-size:24px;">
       Two free Acupuncture Sessions available!
       </p> -->
       <p style="text-align: left;">
-        We at East-West Natural Medicine want to give back to our community!
-        We are so confident that you will love what we do, that we want you to win a free session with us.
-        At the end of the month we will be giving away two free sessions (valued at $216) in a raffle drawing
-        for new clients.
+        We at <a href="http://east-westnaturalmedicine.com/" target="_blank">East-West Natural Medicine</a> want to give back to our community!
+        We are so confident that you will love what we do, that we want you to win a free session with us!
+        At the end of the month we will be raffling off two free sessions to New Patients (a $216 value). These are 1.5hr Initial Visit sessions with Nicole Anderson L.Ac. or Jessica Piazza L.Ac. <a href="http://east-westnaturalmedicine.com/rates.html" target="_blank">Click here</a> to learn more about what your session will include
       </p>
 
       <p style="font-weight:300;text-align: left;">
@@ -35,15 +34,19 @@
           <li>We will email the winners after the drawing.</li>
         </div>
       </p>
+      <span style="font-weight:300;text-align: left;font-size:10px;">
+       Disclaimer Free Sessions valid for New Patients only. We will draw for two different winners on the last day of the month and keep you notified of the winners via FB page and by email. You will have one month to redeem your free session with us.
+      </span>
     </div>
+
   </div>
   </div>
   <div class="large-5 column center-text " style="background-color:#CCC;">
     <br>
-    <%= form_tag(raffle_path, :method=>'post') do %>
+    <%= form_for @client, :url => { :action => "raffleEnter" }  do |f|  %>
             <div class="row">
               <div class="large-10 large-centered column text-center" style="font-size:24px;" >
-                Get your FREE acupuncture Session!
+                Enter to win a FREE acupuncture Session!
               </div>
             </div>
             <br>
@@ -52,7 +55,7 @@
               Name
               <br>
               <p>
-                <%= text_field_tag  "name",'', :required => true%>
+                <%=  f.text_field  "name", :required => true%>
               </p>
             </div>
             </div>
@@ -61,7 +64,7 @@
               Email
               <br>
               <p>
-                <%= email_field_tag  "email",'', :required => true%>
+                <%=  f.text_field "email", :required => true%>
               </p>
             </div>
             </div>
