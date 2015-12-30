@@ -1,0 +1,13 @@
+<div>
+<form action="/stripe" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_FFPsiEJQflNGLrqTeG8OqUhO"
+    data-amount="2000"
+    data-name="Buy one get one free"
+    data-description="$80"
+    data-image="<%= asset_path 'logo.jpg'%>"
+    data-locale="auto">
+  </script>
+</form>
+</div>

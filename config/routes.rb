@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/' => 'home#raffle'
   post '/raffle' =>  'home#raffleEnter'
+  get '/free' => 'home#getOneFree'
+  post 'stripe' => 'home#stripe'
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
